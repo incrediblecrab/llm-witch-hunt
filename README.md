@@ -1,4 +1,4 @@
-# LLM Witch Hunt 🔍
+# LLM Witch-Hunt 🔍
 
 Detect and audit AI/LLM-generated code and API usage in your codebase.
 
@@ -8,7 +8,7 @@ Detect and audit AI/LLM-generated code and API usage in your codebase.
 
 ## Overview
 
-LLM Witch Hunt is a lightweight npm package that scans your codebase to identify:
+LLM Witch-Hunt is a lightweight npm package that scans your codebase to identify:
 
 - **AI-generated code markers** (comments, authors, variable names)
 - **LLM API calls** to major providers (OpenAI, Anthropic, Google, etc.)

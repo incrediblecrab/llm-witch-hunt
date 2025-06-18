@@ -1,7 +1,7 @@
 {
   "name": "llm-witch-hunt",
   "version": "0.1.0",
-  "description": "Detect and audit AI/LLM-generated code and API usage in your codebase",
+  "description": "LLM Witch-Hunt: Detect and audit AI/LLM-generated code and API usage in your codebase",
   "main": "src/index.js",
   "bin": {
     "llm-witch-hunt": "./bin/cli.js"
@@ -11,6 +11,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "echo 'No linting configured yet'",
+    "update-patterns": "node scripts/update-llm-patterns.js",
     "prepublishOnly": "npm test"
   },
   "keywords": [
