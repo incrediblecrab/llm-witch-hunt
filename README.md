@@ -2,7 +2,9 @@
 
 Detect and audit AI/LLM-generated code and API usage in your codebase.
 
+[![npm version](https://badge.fury.io/js/llm-witch-hunt.svg)](https://www.npmjs.com/package/llm-witch-hunt)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/incrediblecrab/llm-witch-hunt.svg)](https://github.com/incrediblecrab/llm-witch-hunt/issues)
 
 ## Overview
 
@@ -189,12 +191,12 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
       - run: npx llm-witch-hunt --fail-on-detect --output ai-audit.json
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: ai-audit-report
@@ -229,7 +231,7 @@ Contributions are welcome!
 ### Development Setup
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/incrediblecrab/llm-witch-hunt.git
 cd llm-witch-hunt
 npm install
 npm test
@@ -259,8 +261,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 - 📖 Documentation: See this README and inline code comments
-- 🐛 Issues: Please report bugs via GitHub issues
-- 💬 Questions: Check existing issues or create a new one
+- 🐛 Issues: [Report bugs on GitHub](https://github.com/incrediblecrab/llm-witch-hunt/issues)
+- 💬 Questions: [Check existing issues](https://github.com/incrediblecrab/llm-witch-hunt/issues) or create a new one
 
 ---
 

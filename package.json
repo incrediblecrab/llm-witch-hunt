@@ -25,16 +25,16 @@
     "anthropic",
     "code-analysis"
   ],
-  "author": "",
+  "author": "mlot.ai",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TBD/llm-witch-hunt.git"
+    "url": "https://github.com/incrediblecrab/llm-witch-hunt.git"
   },
   "bugs": {
-    "url": "https://github.com/TBD/llm-witch-hunt/issues"
+    "url": "https://github.com/incrediblecrab/llm-witch-hunt/issues"
   },
-  "homepage": "https://github.com/TBD/llm-witch-hunt#readme",
+  "homepage": "https://github.com/incrediblecrab/llm-witch-hunt#readme",
   "engines": {
     "node": ">=14.0.0"
   },

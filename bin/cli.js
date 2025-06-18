@@ -27,7 +27,7 @@ program
     try {
       const absolutePath = path.resolve(scanPath);
       
-      if (!options.quiet) {
+      if (!options.quiet && !options.jsonOnly) {
         console.log(chalk.blue(`🔍 LLM Witch Hunt - Scanning ${path.relative(process.cwd(), absolutePath) || '.'}`));
         console.log(chalk.gray('Looking for AI/LLM patterns and API calls...\n'));
       }
@@ -62,7 +62,7 @@ program
           }
           
           if (report.summary.apiFindings > 0) {
-            console.log(chalk.orange(`📡 ${report.summary.apiFindings} API calls detected`));
+            console.log(chalk.yellow(`📡 ${report.summary.apiFindings} API calls detected`));
           }
           
           if (report.summary.aiFindings > 0) {
