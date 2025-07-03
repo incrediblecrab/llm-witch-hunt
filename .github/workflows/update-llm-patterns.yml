@@ -53,11 +53,7 @@ jobs:
 
         - Updated model lists from OpenRouter API
         - Updated model lists from Awesome-LLM repository
-        - Automated weekly update via GitHub Actions
-        
-        🤖 Generated with Claude Code
-        
-        Co-Authored-By: Claude <noreply@anthropic.com>"
+        - Automated weekly update via GitHub Actions"
         git push
     
     - name: Create summary
