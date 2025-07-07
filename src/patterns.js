@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-// Auto-updated on 2025-07-06T03:20:53.945Z by update-llm-patterns.js
-=======
 // Auto-updated on 2025-07-07T15:43:15.935Z by update-llm-patterns.js
->>>>>>> b226f06 (chore: Update auto-update timestamp in patterns file)
-// Auto-updated on 2025-07-03T18:31:59.538Z by update-llm-patterns.js
-// Auto-updated on 2025-07-03T18:27:32.590Z by update-llm-patterns.js
-// Auto-updated on 2025-06-28T21:14:54.638Z by update-llm-patterns.js
-// Auto-updated on 2025-06-18T14:04:20.779Z by update-llm-patterns.js
 const AI_PATTERNS = {
   comments: [
     /AI[- ]generated/gi,
