@@ -1,6 +1,6 @@
 {
   "name": "llm-witch-hunt",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "LLM Witch-Hunt: Detect and audit AI/LLM-generated code and API usage in your codebase",
   "main": "src/index.js",
   "bin": {
