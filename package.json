@@ -1,0 +1,55 @@
+{
+  "name": "llm-witch-hunt",
+  "version": "0.1.4",
+  "description": "LLM Witch-Hunt: Detect and audit AI/LLM-generated code and API usage in your codebase",
+  "main": "src/index.js",
+  "bin": {
+    "llm-witch-hunt": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "echo 'No linting configured yet'",
+    "update-patterns": "node scripts/update-llm-patterns.js",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "ai",
+    "llm",
+    "audit",
+    "code-quality",
+    "security",
+    "compliance",
+    "chatgpt",
+    "openai",
+    "anthropic",
+    "code-analysis"
+  ],
+  "author": "mlot.ai",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/incrediblecrab/llm-witch-hunt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/incrediblecrab/llm-witch-hunt/issues"
+  },
+  "homepage": "https://github.com/incrediblecrab/llm-witch-hunt#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "src",
+    "bin"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "glob": "^10.3.10",
+    "minimatch": "^9.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

@@ -1,0 +1,76 @@
+name: Update LLM Patterns
+
+on:
+  schedule:
+    # Run every Sunday at 2 AM UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-patterns:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run LLM pattern updater
+      run: node scripts/update-llm-patterns.js
+    
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Run tests
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: npm test
+    
+    - name: Commit and push changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add src/patterns.js
+        git commit -m "chore: auto-update LLM patterns
+
+        - Updated model lists from OpenRouter API
+        - Updated model lists from Awesome-LLM repository
+        - Automated weekly update via GitHub Actions"
+        git push
+    
+    - name: Create summary
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        echo "## 🔄 LLM Patterns Updated" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "The LLM detection patterns have been automatically updated with the latest models from:" >> $GITHUB_STEP_SUMMARY
+        echo "- OpenRouter API" >> $GITHUB_STEP_SUMMARY
+        echo "- Awesome-LLM repository" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Changes:" >> $GITHUB_STEP_SUMMARY
+        git show --stat HEAD~1..HEAD >> $GITHUB_STEP_SUMMARY
+    
+    - name: No changes summary
+      if: steps.verify-changed-files.outputs.changed == 'false'
+      run: |
+        echo "## ✅ No Updates Needed" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "The LLM detection patterns are already up to date." >> $GITHUB_STEP_SUMMARY
