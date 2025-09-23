@@ -1,10 +1,11 @@
 # LLM Witch-Hunt 🔍
 
+![npm version](https://img.shields.io/npm/v/llm-witch-hunt)
+![MLoT](https://img.shields.io/badge/MLoT-ai-blue)
+
 Detect and audit AI/LLM-generated code and API usage in your codebase.
 
-[![npm version](https://badge.fury.io/js/llm-witch-hunt.svg)](https://www.npmjs.com/package/llm-witch-hunt)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/incrediblecrab/llm-witch-hunt.svg)](https://github.com/incrediblecrab/llm-witch-hunt/issues)
+![Demo](https://raw.githubusercontent.com/incrediblecrab/Packages-and-Extensions-Media/main/llm-witch-hunt.gif)
 
 ## Overview
 
@@ -263,6 +264,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 📖 Documentation: See this README and inline code comments
 - 🐛 Issues: [Report bugs on GitHub](https://github.com/incrediblecrab/llm-witch-hunt/issues)
 - 💬 Questions: [Check existing issues](https://github.com/incrediblecrab/llm-witch-hunt/issues) or create a new one
+
+---
+
+## Resources
+
+- 📺 [Watch Demo Video](https://youtu.be/XuXNDf0LUGU)
+- 🌐 [Visit MLoT Page](https://mlot.ai/llm-witch-hunt/)
+- 📦 [View on GitHub](https://github.com/incrediblecrab/llm-witch-hunt)
+- 🔒 [Privacy Policy](https://mlot.ai/privacy)
+
+## Publisher
+
+**Max's Lab of Things**
+Visit [mlot.ai](https://mlot.ai/)
 
 ---
 
